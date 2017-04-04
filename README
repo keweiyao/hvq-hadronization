@@ -1,0 +1,18 @@
+Modified on 11/03/2014
+Extend the recombination model to any possible flow velocity
+Normalize at 165 MeV by tuning omega only (no more overal N factor), and then apply to higher effective temperature
+
+Modified on 12/13/2013
+Extract parameters out into file parameters_hd.dat
+
+##############################################################################################
+
+hadr_flag in common.f
+1: pure fragmentation
+2: pure recombination to D0 and D+
+3: frag. + recomb. (including Ds channel)
+
+For hadr_flag = 3, a table of the recombination probability (recomb_*.dat) should be included.
+
+export ftn20 = output_file
+cat input_file | ./filter.Linux
