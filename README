@@ -4,7 +4,8 @@ This is a hybrid hadroniation model of fragmentation and recombination. The cred
 https://github.com/shanshan-cao  
 
 
-
+Modified on 04/04/2017
+Extend the recombine table to a lower temperature (160MeV -> 150 MeV)  in order to be consistent with the HOT-QCD critical temperature
 
 Modified on 11/03/2014
 Extend the recombination model to any possible flow velocity
