@@ -1,3 +1,11 @@
+#frag&recomb
+
+This is a hybrid hadroniation model of fragmentation and recombination. The credit of this code belongs to Dr. Shanshan Cao 
+https://github.com/shanshan-cao  
+
+
+
+
 Modified on 11/03/2014
 Extend the recombination model to any possible flow velocity
 Normalize at 165 MeV by tuning omega only (no more overal N factor), and then apply to higher effective temperature
