@@ -273,22 +273,15 @@ cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
       include 'common.f'
 
-      integer i
+      integer i, UNI_table_tot, UNI_table_BR1
       double precision dummy_pc
+      character*77 filename
 
       if(HQid.eq.4) then
-         open(unit=11,file='recomb_c_tot.dat',
-     &        status='old',form='formatted')
-         open(unit=12,file='recomb_c_BR1.dat',
-     &        status='old',form='formatted')
          prob_int=prob_int_c
          omega_HM=omega_cM
          omega_HB=omega_cB
       elseif(HQid.eq.5) then
-         open(unit=11,file='recomb_b_tot.dat',
-     &        status='old',form='formatted')
-         open(unit=12,file='recomb_b_BR1.dat',
-     &        status='old',form='formatted')
          prob_int=prob_int_b
          omega_HM=omega_bM
          omega_HB=omega_bB
@@ -296,12 +289,24 @@ cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
          write(*,*) "un-recognized heavy quark ID ..."
          stop
       endif
- 
+
+c	  ftn40=recomb_c_tot.dat or b-quark
+c	  ftn50=recomb_c_BR1.dat or b-quark
+      call getenv('ftn40',filename)
+      UNI_table_tot = 40
+      open(unit=UNI_table_tot,
+     &	   file=filename,status='old',form='formatted') 
+
+	  call getenv('ftn50',filename)
+      UNI_table_BR1 = 50
+      open(unit=UNI_table_BR1,
+     &	   file=filename,status='old',form='formatted') 
+
       i=1
       do while(i.le.prob_num)
-         read(unit=11,fmt=2196,err=2198,end=2197) dummy_pc,
+         read(unit=UNI_table_tot,fmt=2196,err=2198,end=2197) dummy_pc,
      &       prob_c(i,0:diffTemp)
-         read(unit=12,fmt=2196,err=2198,end=2197) dummy_pc,
+         read(unit=UNI_table_BR1,fmt=2196,err=2198,end=2197) dummy_pc,
      &       DBR1(i,0:diffTemp)
 c         write(6,*) dummy_pc,prob_c(i,0),prob_c(i,1),prob_c(i,21)
          i=i+1

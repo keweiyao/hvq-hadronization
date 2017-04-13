@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 2.6)
-project (fragPLUSrecomb Fortran)
+project (hvq-hadronization Fortran)
 
 # default build type: Release
 if(NOT CMAKE_BUILD_TYPE)
@@ -27,5 +27,5 @@ set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -cpp -fno-align-commons")
 add_subdirectory (src)
 
 # install dependencies
-install (FILES parameters_hd.dat recomb_c_tot.dat recomb_b_tot.dat recomb_c_BR1.dat recomb_b_BR1.dat DESTINATION ${PROJECT_NAME})
+install (FILES parameters_hd.dat recomb_c_tot.dat recomb_b_tot.dat recomb_c_BR1.dat recomb_b_BR1.dat DESTINATION share/${PROJECT_NAME})
 

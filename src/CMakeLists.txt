@@ -24,4 +24,4 @@ add_executable(${PROJECT_NAME}
   )
 
 # install compiled binary
-install (TARGETS ${PROJECT_NAME} DESTINATION ${PROJECT_NAME})
+install (TARGETS ${PROJECT_NAME} DESTINATION bin)

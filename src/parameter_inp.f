@@ -3,7 +3,8 @@
       include 'common.f'
       character*10 flag
       character*78 inputstr
-      integer open_status,judge
+      integer open_status, judge, INU_param
+      character*77 filename
 
 c set default values
       hadr_flag=1
@@ -23,7 +24,10 @@ c set default values
       prob_int_c=0.5d0
       prob_int_b=0.5d0
 
-      OPEN(UNIT=15,FILE="parameters_hd.dat",
+c	  ftn30=parameter_hd.dat
+      call getenv('ftn30',filename)
+      INU_param = 30
+      open (unit=INU_param,file=filename,
      &     STATUS='OLD',FORM='FORMATTED',IOSTAT=open_status)
 
       if (open_status.ne.0) then
@@ -34,7 +38,7 @@ c set default values
 
 c read input lines
  1    continue
-      read(15,99) flag,inputstr
+      read(unit=INU_param,fmt=99) flag,inputstr
  99   format(1A10,1A78)
 
 c # : treat line as a comment

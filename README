@@ -3,6 +3,10 @@
 This is a hybrid hadroniation model of fragmentation and recombination. The credit of this code belongs to Dr. Shanshan Cao 
 https://github.com/shanshan-cao  
 
+Modified on 04/13/2017
+Set table and parameter_file path with env variables.
+Tables and parameter_file are installed to prefix/share/hvq-hadronization
+Executable file is installed to prefix/bin
 
 Modified on 04/04/2017
 Extend the recombine table to a lower temperature (160MeV -> 150 MeV)  in order to be consistent with the HOT-QCD critical temperature
@@ -23,5 +27,7 @@ hadr_flag in common.f
 
 For hadr_flag = 3, a table of the recombination probability (recomb_*.dat) should be included.
 
-export ftn20 = output_file
-cat input_file | ./filter.Linux
+export ftn20=output_file
+export ftn30=parameter_file
+export ftn40=table_file
+cat input_file | ./hvq-hadronization
