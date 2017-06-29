@@ -25,7 +25,7 @@ c**** read particles **************************************************c
      .        p_num(i), p_id(i), p_px(i), p_py(i), p_pz(i), p_p0(i),
      .        p_mass(i), p_rx(i), p_ry(i), p_rz(i), p_r0(i), 
      .        Thydro(i), c_vx(i), c_vy(i), c_vz(i),
-     .        p_ipx(i), p_ipy(i), p_ipz(i), p_wt(i)
+     .        p_ipx(i), p_ipy(i), p_ipz(i), p_ip0(i)
          p_fx(i)=p_rx(i)
          p_fy(i)=p_ry(i)
          p_fz(i)=p_rz(i)

@@ -127,8 +127,7 @@ c if not, then production vertex = position
          oc_vz(ipout)=c_vz(ipin)
 
 c pass the weight information to the daughter particles
-         op_wt(ipout)=p_wt(ipin)
-        
+         op_ip0(ipout)=p_ip0(ipin)
          op_ipx(ipout)=p_ipx(ipin)
          op_ipy(ipout)=p_ipy(ipin)
          op_ipz(ipout)=p_ipz(ipin)

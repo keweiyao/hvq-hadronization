@@ -38,7 +38,7 @@ c**** write particles *************************************************c
      .        op_num(j), op_id(j), op_px(j), op_py(j), op_pz(j), 
      .        op_p0(j), op_mass(j), op_rx(j), op_ry(j), op_rz(j),
      .        op_r0(j), oThydro(j), oc_vx(j), oc_vy(j), oc_vz(j),
-     .        op_ipx(j), op_ipy(j), op_ipz(j), op_wt(j)
+     .        op_ipx(j), op_ipy(j), op_ipz(j), op_ip0(j)
 
 c         write (unit=OUTU,fmt=*,err=322)
 cc         write (unit=6,fmt=*,err=322)

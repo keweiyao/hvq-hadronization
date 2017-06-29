@@ -216,13 +216,13 @@ c**** PARTICLES *******************************************************c
      .             p_mass(MAXP), p_lstcoll_osc(MAXP),
      .             p_ipx(MAXP), p_ipy(MAXP), p_ipz(MAXP), p_ip0(MAXP),
      .             Thydro(MAXP), c_vx(MAXP), c_vy(MAXP), c_vz(MAXP),
-     .             p_wt(MAXP),sdensity(MAXP)
+     .             sdensity(MAXP)
   
       common /particles/  p_num, p_id, p_px, p_py, p_pz, p_p0, p_mass,
      .                    p_rx, p_ry, p_rz, p_r0,
      .                    p_ipx, p_ipy, p_ipz, p_ip0,
      .                    p_fx, p_fy, p_fz, p_f0,
-     .                    Thydro, c_vx, c_vy, c_vz, p_wt,sdensity
+     .                    Thydro, c_vx, c_vy, c_vz,sdensity
 
  921  format(i10,2x,i10,17(2x,d12.6))      
 
@@ -236,13 +236,13 @@ c     **** OUTPUT ****
      .             op_mass(MAXP), op_lstcoll_osc(MAXP), op_ipx(MAXP), 
      .             op_ipy(MAXP), op_ipz(MAXP), op_ip0(MAXP),
      .             oThydro(MAXP), oc_vx(MAXP), oc_vy(MAXP), oc_vz(MAXP),
-     .             op_wt(MAXP),osdensity(MAXP)
+     .             osdensity(MAXP)
   
       common /outputpart/  op_num, op_id, op_px, op_py, op_pz, op_p0,
      .                     op_mass, op_rx, op_ry, op_rz, op_r0, 
      .                     op_ipx, op_ipy, op_ipz, op_ip0, 
      .                     op_fx, op_fy, op_fz, op_f0,
-     .                     oThydro, oc_vx, oc_vy, oc_vz, op_wt
+     .                     oThydro, oc_vx, oc_vy, oc_vz
 
 
 c**********************************************************************c
