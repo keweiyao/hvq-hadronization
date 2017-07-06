@@ -133,6 +133,8 @@ c       endif
        op_ipx(ipout)=p_ipx(ipin)
        op_ipy(ipout)=p_ipy(ipin)
        op_ipz(ipout)=p_ipz(ipin)
+       op_s1(ipout)=p_s1(ipin)
+       op_s2(ipout)=p_s2(ipin)
        call rotbos(0d0,0d0,c_vx(ipin),c_vy(ipin),c_vz(ipin),
      &            op_px(ipout),op_py(ipout),op_pz(ipout),op_p0(ipout))
        ipout=ipout+1

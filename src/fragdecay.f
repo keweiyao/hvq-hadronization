@@ -131,6 +131,8 @@ c pass the weight information to the daughter particles
          op_ipx(ipout)=p_ipx(ipin)
          op_ipy(ipout)=p_ipy(ipin)
          op_ipz(ipout)=p_ipz(ipin)
+		 op_s1(ipout)=p_s1(ipin)
+		 op_s2(ipout)=p_s2(ipin)
 
 c         if(op_id(ipout).eq.11.or.op_id(ipout).eq.-11) 
 c     .       ipout=ipout+1
