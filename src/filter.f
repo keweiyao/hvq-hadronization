@@ -11,7 +11,7 @@ c**********************************************************************c
       logical isheavymeson
       logical isparton                 
       character*5 fortranunit
-      character*77 filename
+      character*256 filename
       integer i,j,k,rand_seed,numJudge
       double precision rlu,plength,recomb_prob,recomb_BR1,recomb_BR2
       double precision recomb_random,temp_cell
@@ -275,7 +275,7 @@ cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
       integer i, UNI_table_tot, UNI_table_BR1
       double precision dummy_pc
-      character*77 filename
+      character*256 filename
 
       if(HQid.eq.4) then
          prob_int=prob_int_c

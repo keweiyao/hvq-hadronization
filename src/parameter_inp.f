@@ -2,9 +2,9 @@
 
       include 'common.f'
       character*10 flag
-      character*78 inputstr
+      character*256 inputstr
       integer open_status, judge, INU_param
-      character*77 filename
+      character*256 filename
 
 c set default values
       hadr_flag=1
